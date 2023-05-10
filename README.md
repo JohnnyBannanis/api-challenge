@@ -14,7 +14,7 @@ Luego de clonar el repositorio se necesario generar el archivo ".env" y una APP_
         cp .env.example .env
         php artisan key:generate
         
-Tras esto se ejecutan las migraciones a la base de datos.
+Tras esto se ejecutan las migraciones a la base de datos previamente levantado su servicio.
         
         php artisan migrate --path=database/migrations/API
 
