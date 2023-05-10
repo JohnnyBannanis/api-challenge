@@ -25,9 +25,9 @@ Finalmente se sirve la aplicacion
         > INFO  Server running on [http://127.0.0.1:8000].
         
 # Modelo de datos
-
-[Diagrama]
-
+<div align="center">
+<img src="https://raw.githubusercontent.com/JohnnyBannanis/api-challenge/main/Mejora%20API%20Haulmer.png" alt="diagram"  height="350" />
+</div>
 Para este problema se optó por modelar un conjunto de tablas relacionales a ser implementadas mediante migraciones de Elocuent ORM. Inmediatamente complementando el enunciado se decidió añadir una tabla adicional correspondiente a Usuario. Esta permite vincular una persona a un dispositivo de pago y a su vez a una venta, lo encontre práctico como práctica común de los puntos de venta o cajas en donde una persona puede estar a cargo de una venta, dicha acción será manipulada en el respectivo controlador del Dispositivo donde se podrá hacer LogIn y LogOut de este mediante un Endpoint de la API con un RUT de usuario.
 
 Se respeta la nomenclatura dada en el enunciado para los nombres de los campos y tablas, concluyendo con un modelo que relaciona a una Comercio con un Dispositivo desde el cual se generan Ventas. Estas últimas poseen un código de seguridad de la transacción definido como una cadena de texto de 8 dígitos que se almacena encriptado en la base de datos y se puede acceder a él a trave de la API, mostrándolo de forma desencriptada para así ser utilizado en la anulación de una venta acordé a la lógica de negocio del enunciado.
